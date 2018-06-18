@@ -33,6 +33,7 @@ public class PartidaList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_partida_list);
+        this.setTitle("Lista de usuarios");
 
         pb1 = (ProgressBar) findViewById(R.id.indeterminateBar);
 

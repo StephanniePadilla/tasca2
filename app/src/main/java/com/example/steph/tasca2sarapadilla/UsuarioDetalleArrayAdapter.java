@@ -57,4 +57,5 @@ public class UsuarioDetalleArrayAdapter extends ArrayAdapter<Usuario> {
 
         return convertView;
     }
+
 }

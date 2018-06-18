@@ -1,8 +1,10 @@
 package com.example.steph.tasca2sarapadilla;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -32,6 +34,7 @@ public class UsuarioDetalle extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_usuario_detalle);
+        this.setTitle("Detalle de un usuario");
 
         pb1 = (ProgressBar) findViewById(R.id.indeterminateBar);
 
@@ -88,5 +91,19 @@ public class UsuarioDetalle extends AppCompatActivity {
                 Log.d("Request: ", "error loading API" + t.toString());
             }
         });
+    }
+
+    public void back(View view){
+
+        //inici de la tasca
+        pb1 = (ProgressBar) findViewById(R.id.indeterminateBar);
+        pb1.setVisibility(ProgressBar.VISIBLE);
+
+        Intent intentOj = new Intent(UsuarioDetalle.this, MainActivity.class);
+        startActivity(intentOj);
+
+        //al final de la tasca
+        pb1.setVisibility(ProgressBar.INVISIBLE);
+
     }
 }
