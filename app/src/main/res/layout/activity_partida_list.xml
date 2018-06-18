@@ -8,15 +8,20 @@
     tools:context=".PartidaList">
 
     <Button
-        android:id="@+id/lidtaInstisButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:onClick="listaBook"
-        android:text="Lista de libros"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/listaUsuarios"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="99dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/button2"
+        android:onClick="back"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <ProgressBar
         android:id="@+id/indeterminateBar"
@@ -32,15 +37,15 @@
 
     <ListView
         android:id="@+id/followers_list"
-        android:layout_width="358dp"
-        android:layout_height="387dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/listaUsuarios"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lidtaInstisButton"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

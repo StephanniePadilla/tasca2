@@ -32,17 +32,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /*public void detalleLibro (View view){
+    public void detalleUsuario (View view){
 
         //inici de la tasca
         pb1 = (ProgressBar) findViewById(R.id.indeterminateBar);
         pb1.setVisibility(ProgressBar.VISIBLE);
 
-        Intent intentOj = new Intent(MainActivity.this, DetalleLibro.class);
+        Intent intentOj = new Intent(MainActivity.this, UsuarioDetalle.class);
         startActivity(intentOj);
 
         //al final de la tasca
         pb1.setVisibility(ProgressBar.INVISIBLE);
 
-    }*/
+    }
 }

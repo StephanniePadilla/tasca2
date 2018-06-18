@@ -8,36 +8,40 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/iniciar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:id="@+id/listaUsuarios"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button2"
         android:onClick="listaLibros"
-        android:text="Lista de libros"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Lista de Usuarios"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.573"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.27" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/iniciar2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/listaUnSoloUsuario"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="Detalle de un libro"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button2"
+        android:onClick="detalleUsuario"
+        android:text="Detalle de un suario"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.74" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listaUsuarios"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ProgressBar
         android:id="@+id/indeterminateBar"

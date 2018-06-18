@@ -1,5 +1,6 @@
 package com.example.steph.tasca2sarapadilla;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,7 +20,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class PartidaList extends AppCompatActivity {
 
-    public static final String BASE_URL = "http://api.dsamola.tk/";
+    public static final String BASE_URL = "http://192.168.1.41:8080/myapp/";
 
     private TrackApi trackServices;
     String tag = "Events";
@@ -43,10 +44,6 @@ public class PartidaList extends AppCompatActivity {
 
         trackServices = retrofit.create(TrackApi.class);
 
-    }
-
-    public void listaBook (View view) {
-
         callUser = trackServices.listaUsuarios();
         callUser.enqueue(new Callback<List<Usuario>>() {
 
@@ -68,8 +65,7 @@ public class PartidaList extends AppCompatActivity {
 
                     //Intent intentOj = new Intent(Peticiones.this, Peticiones.class);
                     //startActivity(intentOj);
-                }
-                else {
+                } else {
                     //al final de la tasca
                     pb1.setVisibility(ProgressBar.INVISIBLE);
                     Log.d("onResponse", "onResponse. Code" + Integer.toString(statusCode));
@@ -85,5 +81,19 @@ public class PartidaList extends AppCompatActivity {
                 Log.d("Request: ", "error loading API" + t.toString());
             }
         });
+    }
+
+    public void back(View view){
+
+        //inici de la tasca
+        pb1 = (ProgressBar) findViewById(R.id.indeterminateBar);
+        pb1.setVisibility(ProgressBar.VISIBLE);
+
+        Intent intentOj = new Intent(PartidaList.this, MainActivity.class);
+        startActivity(intentOj);
+
+        //al final de la tasca
+        pb1.setVisibility(ProgressBar.INVISIBLE);
+
     }
 }

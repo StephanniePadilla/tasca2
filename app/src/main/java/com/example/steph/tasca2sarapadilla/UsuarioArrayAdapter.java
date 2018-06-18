@@ -28,7 +28,7 @@ public class UsuarioArrayAdapter extends ArrayAdapter<Usuario> {
         //Picasso.with(super.getContext()).load(u.getImage()).into((ImageView) convertView.findViewById(R.id.foto_img));
         Picasso.with(super.getContext()).load("http://www.dysconcsa.com/img/user.png").into((ImageView) convertView.findViewById(R.id.foto_img));
         TextView et = (TextView)convertView.findViewById(R.id.username_txt);
-        TextView et2 = (TextView)convertView.findViewById(R.id.email_txt);
+        TextView et2 = (TextView)convertView.findViewById(R.id.idemail_txt);
         TextView et3 = (TextView)convertView.findViewById(R.id.obj1_txt);
 
         et.setText(u.getNombre()); //cojo los nombres de los autores
